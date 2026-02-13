@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Force | Find Your Dream Job</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    :root {
+    --primary: #0052cc;
+    --secondary: #07c;
+    --dark: #172b4d;
+    --light-bg: #f4f5f7;
+    --text-main: #344563;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--dark);
+}
+
+.logo span { color: var(--primary); }
+
+.nav-links a {
+    margin-right: 25px;
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.btn-login {
+    padding: 10px 25px;
+    border-radius: 6px;
+    border: 1px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 10% 60px;
+    background: linear-gradient(135deg, #ffffff 0%, #e6f0ff 100%);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.hero h1 span { color: var(--primary); }
+
+/* Search Bar */
+.search-container {
+    background: white;
+    padding: 10px;
+    border-radius: 50px;
+    display: flex;
+    max-width: 800px;
+    margin: 30px auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.search-container input {
+    flex: 1;
+    border: none;
+    padding: 15px 20px;
+    outline: none;
+    font-size: 16px;
+}
+
+.btn-search {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0 35px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Job Cards */
+.job-container {
+    padding: 40px 8%;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.job-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.job-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ebecf0;
+    position: relative;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+}
+
+.card-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #e3f2fd;
+    color: var(--primary);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.company {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.job-meta {
+    font-size: 14px;
+    color: #6b778c;
+    margin-bottom: 20px;
+}
+
+.job-meta span { margin-right: 15px; }
+
+.skills { margin-bottom: 20px; }
+
+.skill {
+    background: #f4f5f7;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-right: 8px;
+}
+
+.btn-apply {
+    width: 100%;
+    padding: 12px;
+    background: #f4f5f7;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-apply:hover {
+    background: var(--primary);
+    color: white;
+}
+</style>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">WHITE<span>FORCE</span></div>
+        <div class="nav-links">
+            <a href="#">Find Jobs</a>
+            <a href="#">For Employers</a>
+            <button class="btn-login">Login</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Find a job that <span>fits your life.</span></h1>
+        <p>Explore thousands of opportunities in Tech, Sales, and Management.</p>
+        
+        <div class="search-container">
+            <input type="text" placeholder="Job title or keywords">
+            <input type="text" placeholder="Location">
+            <button class="btn-search">Search Jobs</button>
+        </div>
+        
+        <div class="trending">
+            Trending: <span>#Remote</span> <span>#Java</span> <span>#Sales</span>
+        </div>
+    </header>
+
+    <main class="job-container">
+        <div class="section-header">
+            <h2>Featured Opportunities</h2>
+            <a href="#">View All</a>
+        </div>
+
+        <div class="job-grid">
+            <div class="job-card">
+                <div class="card-tag">New</div>
+                <h3>Senior Full Stack Developer</h3>
+                <p class="company">Tech Solutions Inc.</p>
+                <div class="job-meta">
+                    <span>📍 Bangalore, IN</span>
+                    <span>💼 5-8 Years</span>
+                    <span>💰 ₹18L - ₹25L</span>
+                </div>
+                <div class="skills">
+                    <span class="skill">React</span>
+                    <span class="skill">Node.js</span>
+                    <span class="skill">AWS</span>
+                </div>
+                <button class="btn-apply">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h3>Regional Sales Manager</h3>
+                <p class="company">Global Logistics Ltd.</p>
+                <div class="job-meta">
+                    <span>📍 Mumbai, IN</span>
+                    <span>💼 3-5 Years</span>
+                    <span>💰 ₹10L - ₹15L</span>
+                </div>
+                <div class="skills">
+                    <span class="skill">B2B</span>
+                    <span class="skill">CRM</span>
+                </div>
+                <button class="btn-apply">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h3>UI/UX Designer</h3>
+                <p class="company">Creative Agency</p>
+                <div class="job-meta">
+                    <span>📍 Remote</span>
+                    <span>💼 2+ Years</span>
+                    <span>💰 Competitive</span>
+                </div>
+                <div class="skills">
+                    <span class="skill">Figma</span>
+                    <span class="skill">UI Design</span>
+                </div>
+                <button class="btn-apply">Apply Now</button>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
